@@ -1,5 +1,5 @@
 # gilog
-GILog abbr of golang interface log, abstract of log api.
+ILog abbr of interface log, abstract of log api.
 
 
 ## purpose
