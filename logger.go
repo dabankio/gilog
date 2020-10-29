@@ -16,11 +16,6 @@ type LeveledLogger interface {
 	Panicf(template string, args ...interface{})
 }
 
-// NamedLogger has a name
-type NamedLogger interface {
-	Named(name string)
-}
-
 // WithLeveledLogger Levelw(msg,args...)
 type WithLeveledLogger interface {
 	Debugw(msg string, keysAndValues ...interface{})
@@ -34,7 +29,8 @@ type WithLeveledLogger interface {
 // FullLogger with sub logger
 type FullLogger interface {
 	LeveledLogger
-	NamedLogger
 	WithLeveledLogger
+
+	Named(name string) FullLogger
 	With(keysAndValues ...interface{}) FullLogger
 }
