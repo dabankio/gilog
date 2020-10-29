@@ -31,6 +31,6 @@ type FullLogger interface {
 	LeveledLogger
 	WithLeveledLogger
 
-	Named(name string) FullLogger
-	With(keysAndValues ...interface{}) FullLogger
+	CopyNamed(name string) FullLogger
+	CopyWith(keysAndValues ...interface{}) FullLogger
 }
