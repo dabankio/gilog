@@ -1,4 +1,4 @@
-package gilog
+package ilog
 
 // LeveledLogger Level(args...) Levelf(t,args...)
 type LeveledLogger interface {
